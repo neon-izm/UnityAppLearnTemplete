@@ -1,0 +1,16 @@
+
+*.pdb
+*.exp
+*.ipdb
+*.iobj
+*.idb
+
+Library/
+obj/
+Logs/
+Temp/
+UserSettings/
+*.csproj
+.idea/
+*.sln
+*.user
