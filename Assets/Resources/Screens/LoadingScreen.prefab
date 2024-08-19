@@ -514,6 +514,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2509040362694868080}
   - component: {fileID: 819190587580032907}
+  - component: {fileID: 7453663293889113372}
   m_Layer: 5
   m_Name: LoadingScreen
   m_TagString: Untagged
@@ -562,6 +563,19 @@ MonoBehaviour:
     _pushExitAnimations: []
     _popEnterAnimations: []
     _popExitAnimations: []
+--- !u!114 &7453663293889113372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6812127434481041376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f9db41160f4a24f8af81618820fb53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nextButton: {fileID: 523379096364155631}
 --- !u!1 &7297642114419848946
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,6 +776,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63ba87d683b503e44b9a93c94b5c11f5, type: 3}
+--- !u!114 &523379096364155631 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5130696683243898084, guid: 63ba87d683b503e44b9a93c94b5c11f5, type: 3}
+  m_PrefabInstance: {fileID: 4643369480106378763}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &5491684456766851927 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 884656172643044700, guid: 63ba87d683b503e44b9a93c94b5c11f5, type: 3}
