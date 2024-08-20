@@ -9,6 +9,7 @@ public class ModalComponent
     public string Message;
     public string OkButtonText;
     public string CancelButtonText;
+    public Sprite BodyImage;
     public System.Action OnOk;
     public System.Action OnCancel;
 }
@@ -16,9 +17,11 @@ public class ModalComponent
 public class BasicModal : MonoBehaviour
 {
     [SerializeField] TMPro.TextMeshProUGUI _title;
+    [SerializeField] Image _bodyImage;
     [SerializeField] TMPro.TextMeshProUGUI _message;
     [SerializeField] Button _okButton;
     [SerializeField] Button _cancelButton;
+
 
     public void SetModal(ModalComponent modalComponent)
     {
@@ -27,6 +30,17 @@ public class BasicModal : MonoBehaviour
         _okButton.onClick.RemoveAllListeners();
         _cancelButton.onClick.RemoveAllListeners();
         _okButton.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = modalComponent.OkButtonText;
+
+        if (modalComponent.BodyImage != null)
+        {
+            _bodyImage.gameObject.SetActive(true);
+            _bodyImage.sprite = modalComponent.BodyImage;
+            _bodyImage.preserveAspect = true;
+        }
+        else
+        {
+            _bodyImage.gameObject.SetActive(false);
+        }
 
         if (string.IsNullOrEmpty(modalComponent.CancelButtonText))
         {
@@ -42,5 +56,4 @@ public class BasicModal : MonoBehaviour
 
         _okButton.onClick.AddListener(() => { modalComponent.OnOk?.Invoke(); });
     }
-
 }

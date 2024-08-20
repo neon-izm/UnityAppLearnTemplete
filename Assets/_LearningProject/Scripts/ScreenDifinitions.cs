@@ -6,12 +6,6 @@ public enum ScreenType
 {
     LoadingScreen,
     StartupMainScreen,
+    StartupNextScreen,
     Back
-}
-
-public enum ModalType
-{
-    ModalTest,
-    Modal2,
-    Modal3
 }

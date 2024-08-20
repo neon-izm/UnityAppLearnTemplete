@@ -25,9 +25,9 @@ public class StartupMainScreen : MonoBehaviour
 
     private void OnNextButtonClicked()
     {
-        EventBus.EventBus<ModalEvent>.Raise(new ModalEvent()
+        EventBus.EventBus<ScreenTransitionEvent>.Raise(new ScreenTransitionEvent()
         {
-            MyModalType = ModalType.ModalTest
+            MyScreenType = ScreenType.StartupNextScreen
         });
     }
 }
